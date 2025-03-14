@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phan Mem Phan Tich Chi So Co The</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+        }
+        #chartContainer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Phan Mem Phan Tich Chi So Co The</h1>
+        <label for="weight">Can nang (kg):</label>
+        <input type="number" id="weight" required>
+
+        <label for="height">Chieu cao (cm):</label>
+        <input type="number" id="height" required>
+
+        <label for="waist">Vong eo (cm):</label>
+        <input type="number" id="waist" required>
+
+        <label for="hip">Vong mong (cm):</label>
+        <input type="number" id="hip" required>
+
+        <button onclick="calculate()">Tinh toan</button>
+
+        <div id="result"></div>
+        <div id="chartContainer">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Thu vi?n Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Script tính toán và hi?n th? -->
+    <script src="script.js"></script>
+</body>
+</html>
